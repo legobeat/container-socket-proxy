@@ -1,4 +1,11 @@
-FROM haproxy:2.2-alpine
+FROM docker.io/haproxy:2.9-alpine
+USER root
+# adding haproxy user to root group just to accommodate for compose-spec not allowing setting owner/mode on mounts,
+# and default mode of socket
+
+RUN sed -i 's/^root:.*/\0,haproxy/' /etc/group
+
+USER haproxy
 
 EXPOSE 2375
 ENV ALLOW_RESTARTS=0 \
