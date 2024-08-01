@@ -136,6 +136,7 @@ extremely critical but can expose some information that your service does not ne
 -   `NETWORKS`
 -   `NODES`
 -   `PLUGINS`
+-   `PODS`
 -   `SERVICES`
 -   `SESSION`
 -   `SWARM`

@@ -27,6 +27,7 @@ ENV ALLOW_RESTARTS=0 \
     NODES=0 \
     PING=1 \
     PLUGINS=0 \
+    PODS=0 \
     POST=0 \
     SECRETS=0 \
     SERVICES=0 \
