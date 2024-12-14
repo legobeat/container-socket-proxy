@@ -1,4 +1,5 @@
-FROM docker.io/haproxy:2.9-alpine
+ARG BASE_IMAGE=docker.io/haproxy:2.9-alpine3.20
+FROM ${BASE_IMAGE}
 USER root
 # adding haproxy user to root group just to accommodate for compose-spec not allowing setting owner/mode on mounts,
 # and default mode of socket
