@@ -63,13 +63,14 @@ def proxy_factory(image):
                 "container",
                 "run",
                 "--detach",
+                "--pull=never",
                 "--privileged",
                 "--publish=2375",
                 "--volume=/var/run/docker.sock:/var/run/docker.sock",
                 *env_list,
                 image,
             ).strip()
-            time.sleep(0.5)
+            time.sleep(3.0)
             container_data = json.loads(
                 docker("container", "inspect", container_id.strip())
             )
