@@ -63,6 +63,7 @@ def proxy_factory(image):
                 "container",
                 "run",
                 "--detach",
+                "--pull=never",
                 "--privileged",
                 "--publish=2375",
                 "--volume=/var/run/docker.sock:/var/run/docker.sock",
