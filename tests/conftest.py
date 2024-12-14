@@ -70,7 +70,7 @@ def proxy_factory(image):
                 *env_list,
                 image,
             ).strip()
-            time.sleep(2.0)
+            time.sleep(3.0)
             container_data = json.loads(
                 docker("container", "inspect", container_id.strip())
             )
